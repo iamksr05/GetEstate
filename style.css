@@ -1,0 +1,97 @@
+:root {
+    --bg-color: #ffffff;
+    --surface-color: #f8fafc;
+    --btn-bgcolor: #155dfb;
+    --primary-color: #000000;
+    --color-faded: #343434;
+}
+
+html[data-theme="dark"] {
+    --bg-color: #0f0f0f;
+    --surface-color: #1c1d1e;
+    --btn-bgcolor: #155dfb;
+    --primary-color: #ffffff;
+    --color-faded: #e7e5e5;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+}
+
+
+header {
+    justify-items: center;
+    border-bottom: 0.8px solid gray;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    margin: -8px;
+}
+
+.main-head {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 10px 0px;
+
+}
+
+
+.app-name {
+    display: inline-flex;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.name-logo img{
+    margin-top: -14px;
+}
+
+nav {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: var(--color-faded);
+}
+
+.bi-plus-circle {
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--btn-bgcolor);
+}
+main {
+    justify-items: center;
+}
+
+.search-section {
+    width: 1200px;
+    height: 500px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("assets/images/bungalow.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.search-text h2 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}
+
+
+.search-text p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
