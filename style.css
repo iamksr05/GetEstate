@@ -26,14 +26,18 @@ header {
     border-bottom: 0.8px solid gray;
     background-color: var(--bg-color);
     color: var(--primary-color);
-    margin: -8px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .main-head {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0px 10px 0px;
+    padding: 30px 0px 20px 0px;
 
 }
 
@@ -44,7 +48,7 @@ header {
     font-weight: 500;
 }
 
-.name-logo img{
+.name-logo img {
     margin-top: -14px;
 }
 
@@ -67,26 +71,32 @@ nav a {
     color: white;
     background-color: var(--btn-bgcolor);
 }
+
 main {
+    margin-top:110px;
     justify-items: center;
 }
 
 .search-section {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     height: 500px;
     background-image:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url("assets/images/bungalow.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 30px;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .search-text h2 {
     color: white;
     font-size: 60px;
-    text-align: center;
+    margin-bottom: -10px;
 }
 
 
@@ -94,4 +104,145 @@ main {
     color: white;
     font-size: 20px;
     text-align: center;
+    line-height: 30px;
 }
+
+.search-text {
+    width: 700px;
+    text-align: center;
+    margin-top: 40px;
+    height: 100vh;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.search-filter>div {
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid rgb(221, 206, 206);
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.searchInput {
+    border: none;
+    background-color: #ffffff;
+    padding: 10px 5px;
+    font-size: 16px;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.price-select {
+    border: none;
+    background-color: #f3f0f0;
+    padding: 8px 18px 8px 10px;
+    border-radius: 10px;
+}
+
+.filter-button {
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 10px;
+    background-color: #487ae5;
+    cursor: pointer;
+}
+
+.filter-button:active {
+    background-color: #2862df;
+}
+
+.filter-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.house-filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 0px;
+    column-gap: 8px;
+}
+
+
+.house-filters .opt-filters {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e7e3e3;
+
+}
+
+.divider {
+    width: 1px;
+    height: 35px;
+    background-color: #ccc;
+    margin: 0 15px;
+}
+
+.property-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.property-card {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.pcard-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pcard-details {
+    padding: 15px 25px;
+}
+
+.pcard-price {
+    font-size: 21px;
+    font-weight: bold;
+    color: #2862df;
+    margin: 15px 0px;
+}
+
+.pcard-add {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 15px 0px;
+}
+
+
+.pcard-prop-info {
+    display: flex;
+    column-gap: 15px;
+    margin: 15px 0px;
+    color: gray;
+}
+
+.pcard-prop-info > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+
