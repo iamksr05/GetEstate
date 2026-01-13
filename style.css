@@ -27,12 +27,13 @@ header {
     background-color: var(--bg-color);
     color: var(--primary-color);
     position: fixed;
+    margin-left: -8px;
     top: 0;
     width: 100%;
 }
 
 .main-head {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -45,14 +46,14 @@ header {
 .app-name {
     display: inline-flex;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .name-logo img {
     margin-top: -14px;
 }
 
-nav {
+.head-nav {
     width: 300px;
     display: flex;
     justify-content: space-between;
@@ -60,7 +61,7 @@ nav {
 }
 
 
-nav a {
+.head-nav a {
     text-decoration: none;
     color: var(--color-faded);
 }
@@ -73,12 +74,13 @@ nav a {
 }
 
 main {
-    margin-top:110px;
+    margin-top: 110px;
     justify-items: center;
+    margin-bottom: 200px;
 }
 
 .search-section {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
     height: 500px;
@@ -164,7 +166,7 @@ main {
 }
 
 .filter-section {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
 }
@@ -193,8 +195,16 @@ main {
     margin: 0 15px;
 }
 
+
+.detail-cards {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    justify-items: center;
+    gap: 30px;
+}
+
 .property-section {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
 }
@@ -238,11 +248,78 @@ main {
     color: gray;
 }
 
-.pcard-prop-info > div {
+.pcard-prop-info>div {
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
 
+footer {
+    background-color: #ffffff;
+    padding-top: 50px;
+}
 
+.site-footer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 4fr 3fr 3fr 4fr;
+    gap: 40px;
+}
+
+.footer-name-logo {
+    width: 250px;
+    padding-top: 20px;
+}
+
+.footer-app-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-nav li {
+    margin: 10px 0px;
+}
+
+.footer-nav>ul>li>a {
+    text-decoration: none;
+    color: #6b7280;
+}
+
+.news-email {
+    border: none;
+    padding: 12px;
+    background-color: #f8fafc;
+    border-radius: 10px;
+}
+.news-email + button {
+    border: none;
+    padding: 9px 14px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #487ae5;
+    cursor: pointer;
+}
+
+.news-email + button:active {
+    background-color: #2862df;
+}
+
+.copyright-info {
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: #9ca3af;
+  font-size: 14px;
+}
