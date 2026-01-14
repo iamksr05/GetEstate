@@ -1,0 +1,161 @@
+:root {
+    --bg-color: #ffffff;
+    --surface-color: #f8fafc;
+    --btn-bgcolor: #155dfb;
+    --primary-color: #000000;
+    --color-faded: #343434;
+}
+
+html[data-theme="dark"] {
+    --bg-color: #0f0f0f;
+    --surface-color: #1c1d1e;
+    --btn-bgcolor: #155dfb;
+    --primary-color: #ffffff;
+    --color-faded: #e7e5e5;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+}
+
+
+header {
+    justify-items: center;
+    border-bottom: 0.8px solid gray;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    position: fixed;
+    margin-left: -8px;
+    top: 0;
+    width: 100%;
+}
+
+.main-head {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px 20px 0px;
+
+}
+
+
+.app-name {
+    display: inline-flex;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.name-logo img {
+    margin-top: -14px;
+}
+
+.head-nav {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+
+.head-nav a {
+    text-decoration: none;
+    color: var(--color-faded);
+}
+
+.bi-plus-circle {
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--btn-bgcolor);
+}
+
+
+
+
+
+/* overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay:target {
+  display: flex;
+}
+
+/* hide radios */
+input[type="radio"] {
+  display: none;
+}
+
+/* main image */
+.main {
+  width: 80%;
+  max-width: 800px;
+  height: 450px;
+  position: relative;
+}
+
+.main img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.95);
+}
+
+/* show selected image */
+#img1:checked ~ .main .img1,
+#img2:checked ~ .main .img2,
+#img3:checked ~ .main .img3 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* thumbnails */
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.thumbs img:hover {
+  opacity: 1;
+}
+
+/* close */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.open-img {
+  cursor: pointer;
+  max-width: 100%;
+  border-radius: 8px;
+}

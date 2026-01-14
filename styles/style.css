@@ -30,6 +30,10 @@ header {
     margin-left: -8px;
     top: 0;
     width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    z-index: 100;
+
 }
 
 .main-head {
