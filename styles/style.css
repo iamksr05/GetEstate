@@ -1,6 +1,6 @@
 :root {
     --bg-color: #ffffff;
-    --surface-color: #f8fafc;
+    --surface-color: #f6f7f9;
     --btn-bgcolor: #155dfb;
     --primary-color: #000000;
     --color-faded: #343434;
@@ -306,7 +306,7 @@ footer {
 .news-email {
     border: none;
     padding: 12px;
-    background-color: #f8fafc;
+    background-color: #f6f7f9;
     border-radius: 10px;
 }
 
