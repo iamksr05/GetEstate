@@ -219,6 +219,7 @@ main {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
 }
 
 .pcard-image img {
@@ -278,6 +279,10 @@ footer {
     padding-top: 20px;
 }
 
+.footer-name-logo p {
+    color: #6b7280;
+}
+
 .footer-app-name {
     font-size: 20px;
     font-weight: bold;
@@ -327,4 +332,11 @@ footer {
     height: 60px;
     color: #9ca3af;
     font-size: 14px;
+}
+
+.detail-cards a:active,
+.detail-cards a:link,
+.detail-cards a:visited {
+    color: black;
+    text-decoration: none;
 }
