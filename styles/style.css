@@ -24,7 +24,7 @@ body {
 header {
     justify-items: center;
     border-bottom: 0.8px solid gray;
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
     color: var(--primary-color);
     position: fixed;
     margin-left: -8px;
