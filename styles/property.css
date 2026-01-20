@@ -69,12 +69,16 @@ header {
     display: flex;
     justify-content: space-between;
     font-weight: 500;
+    align-items: center;
 }
 
 
-.head-nav a {
-    text-decoration: none;
-    color: var(--color-faded);
+.head-nav button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid blue;
+    color: white;
+    background-color: var(--btn-bgcolor);
 }
 
 .bi-plus-circle {

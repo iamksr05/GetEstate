@@ -1,0 +1,59 @@
+<dialog class="myDialog" id="myDialog">
+    <div class="list-header">
+        <h1>List Your Property</h1>
+        <p>Fill in the details below to start attracting buyers or renters.</p>
+    </div>
+
+    <div class="list-body">
+        <div class="prop-info">
+            <label for="property-title">Property Title</label><br>
+            <input type="text" name="property-title" id="property-title"
+                placeholder="e.g. Cozy 2-Bedroom Apartment in Downtown">
+        </div>
+
+        <div class="prop-info">
+            <label for="prop-desc">Description</label><br>
+            <textarea name="prop-desc" id="prop-desc" rows="5"
+                placeholder="Describe the unique features, amenities, and neighborhood..."></textarea>
+        </div>
+
+        <div class="type-price">
+            <div class="prop-tp">
+                <label for="prop-price">Asking Price (₹)</label><br>
+                <span>₹</span><input type="number" name="prop-price" id="prop-price">
+            </div>
+
+            <div class="prop-tp">
+                <label for="prop-type">Property Type</label><br>
+                <select name="prop-type" id="prop-type">
+                    <option value="">SELECT TYPE</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="villa">Villa</option>
+                    <option value="townhome">Townhome</option>
+                    <option value="flat">Flat</option>
+                    <option value="farmhouse">Farmhouse</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="prop-info">
+            <label for="prop-loc">Location</label><br>
+            <input type="text" name="prop-loc" id="prop-loc" placeholder="Enter full address or city">
+        </div>
+
+        <div class="prop-info">
+            <label for="prop-photos">Upload Photos</label><br>
+            <span class="prop-images-sec">
+                <input type="file" name="prop-photos" id="prop-photos">
+            </span>
+        </div>
+
+        <div class="modal-btn">
+            <button class="modal-cancel" onclick="document.getElementById('myDialog').close()">Cancel</button>
+            <button class="modal-save">Save</button>
+        </div>
+
+    </div>
+    <button onclick="document.getElementById('myDialog').close()">Close chat</button>
+</dialog>

@@ -10,3 +10,18 @@ toggleBtn.addEventListener("click", () => {
     html.setAttribute("data-theme", "light");
   }
 });
+
+
+
+async function openPropertyModal() {
+  let dialog = document.getElementById("myDialog");
+
+  if (!dialog) {
+    const res = await fetch("../property-modal.html");
+    const html = await res.text();
+    document.body.insertAdjacentHTML("beforeend", html);
+    dialog = document.getElementById("myDialog");
+  }
+
+  dialog.showModal();
+}

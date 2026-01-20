@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/property-modal.css">
 
 
 </head>
@@ -21,10 +22,13 @@
             <nav class="head-nav">
                 <a href="#">Browse</a>
                 <a href="#">About</a>
-                <a href="#"><span class="bi bi-plus-circle">&nbsp;&nbsp;List Property</span></a>
+                <button onclick="openPropertyModal()">
+                    <span class="bi bi-plus-circle">&nbsp;&nbsp;List Property</span>
+                </button>
             </nav>
         </div>
     </header>
+
 
     <main>
         <section class="search-section">
@@ -50,13 +54,13 @@
 
         <section class="filter-section">
             <div class="house-filters">
-                <div class="bi bi-house-fill opt-filters">&nbsp;All Properties</div>
-                <div class="opt-filters">Houses</div>
-                <div class="opt-filters">Apartments</div>
-                <div class="opt-filters">Villas</div>
-                <div class="opt-filters">Townhomes</div>
+                <button class="bi bi-house-fill opt-filters">&nbsp;All Properties</button>
+                <button class="opt-filters">Houses</button>
+                <button class="opt-filters">Apartments</button>
+                <button class="opt-filters">Villas</button>
+                <button class="opt-filters">Townhomes</button>
                 <div class="divider"></div>
-                <div class="bi bi-funnel-fill opt-filters">&nbsp;Filters</div>
+                <button class="bi bi-funnel-fill opt-filters">&nbsp;Filters</button>
             </div>
         </section>
 

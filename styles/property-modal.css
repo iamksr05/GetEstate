@@ -1,0 +1,148 @@
+.myDialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.myDialog {
+    border-radius: 20px;
+    border: 1px solid #e7e3e3;
+    width: 700px;
+    height: 700px;
+    background-color: var(--surface-color);
+}
+
+.list-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.list-header p {
+    margin-top: -10px;
+    color: rgb(106, 103, 103);
+}
+
+.list-body {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    border: 1px solid #e7e3e3;
+    padding: 30px;
+}
+
+.prop-info {
+    margin-bottom: 40px;
+}
+
+.prop-info label {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.prop-info>input,
+.prop-info textarea {
+    font-family: inherit;
+    width: 610px;
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    color: #2c2b2b;
+    border: 1px solid #e7e3e3;
+}
+
+.prop-tp input,
+.prop-tp select {
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    color: #2c2b2b;
+    border: 1px solid #e7e3e3;
+}
+
+.prop-tp span {
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 10px;
+    color: #555;
+    pointer-events: none;
+}
+
+.prop-tp input {
+    width: 280px;
+    padding-left: 25px;
+}
+
+.prop-tp select {
+    width: 280px;
+}
+
+
+.type-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.prop-info input::placeholder,
+.prop-info textarea::placeholder {
+    font-family: inherit;
+    color: rgb(173, 168, 168);
+}
+
+.prop-images-sec {
+    display: inline-block;
+    display: flex;
+    width: 635px;
+    height: 150px;
+    border: 2px dashed rgb(139, 199, 223);
+    border-radius: 10px;
+    background-color: rgba(135, 206, 235, 0.2);
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-save {
+    font-size: 20px;
+    padding: 8px 16px;
+    color: #fff;
+    border: 1px solid rgb(19, 130, 19);
+    border-radius: 12px;
+    background-color: rgb(15, 164, 15);
+    transition: transform 0.1s ease;
+}
+
+.modal-cancel {
+    font-size: 20px;
+    padding: 8px 16px;
+    color: #0f0f0f;
+    border: 1px solid #838080;
+    border-radius: 12px;
+    margin-right: 10px;
+    background-color: var(--surface-color);
+    transition: transform 0.1s ease;
+}
+
+.modal-save:hover,
+.modal-cancel:hover {
+    cursor: pointer;
+
+}
+
+.modal-save:active {
+    background-color: rgb(22, 110, 22);
+    transform: scale(0.96);
+}
+
+.modal-cancel:active {
+    background-color: #e3e5e8;
+    transform: scale(0.96);
+}
