@@ -55,3 +55,43 @@
     border-color: var(--btn-bgcolor);
     outline: none;
 }
+
+.contact-info-card h2 {
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    color: #155dfb;
+    font-size: 24px;
+}
+
+.info-content h4 {
+    margin: 0 0 5px;
+}
+
+.info-content p {
+    margin: 0;
+    color: #aaa;
+}
+
+.social-section {
+    margin-top: 50px;
+}
+
+.social-section h4 {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+}
+
+.contact-form h2 {
+    margin-bottom: 30px;
+}

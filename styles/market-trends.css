@@ -22,6 +22,129 @@
     grid-column: span 6;
 }
 
-.trend-card.third {
-    grid-column: span 4;
+
+.card-flex {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trend-up {
+    color: green;
+}
+
+.trend-down {
+    color: red;
+}
+
+/* Chart */
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 200px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chart-bar {
+    width: 12%;
+    border-radius: 5px 5px 0 0;
+}
+
+.bar-1 {
+    background: #e0e7ff;
+    height: 40%;
+}
+
+.bar-2 {
+    background: #c7d2fe;
+    height: 55%;
+}
+
+.bar-3 {
+    background: #a5b4fc;
+    height: 45%;
+}
+
+.bar-4 {
+    background: #818cf8;
+    height: 65%;
+}
+
+.bar-5 {
+    background: #6366f1;
+    height: 80%;
+}
+
+.bar-6 {
+    background: #4f46e5;
+    height: 75%;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* List */
+.neighborhood-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.neighborhood-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.neighborhood-item:last-child {
+    border-bottom: none;
+}
+
+.price-bold {
+    font-weight: bold;
+}
+
+/* Subscribe Card */
+.subscribe-card {
+    text-align: center;
+    background: #155dfb;
+    color: white;
+}
+
+.subscribe-text {
+    margin: 15px 0 25px;
+}
+
+.subscribe-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+.subscribe-btn {
+    background: white;
+    color: #155dfb;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }

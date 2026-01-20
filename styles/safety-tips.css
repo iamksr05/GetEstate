@@ -13,3 +13,17 @@
     border-radius: 20px;
     border-left: 5px solid var(--btn-bgcolor);
 }
+
+.safety-title {
+    margin-bottom: 15px;
+}
+
+.safety-icon {
+    color: #155dfb;
+    margin-right: 10px;
+}
+
+.safety-desc {
+    color: gray;
+    line-height: 1.6;
+}

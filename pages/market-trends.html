@@ -37,70 +37,62 @@
             <div class="trend-card third">
                 <h3>Average Price</h3>
                 <div class="stat-value">₹45.2L</div>
-                <p style="color: green;">▲ 5.4% from last month</p>
+                <p class="trend-up">▲ 5.4% from last month</p>
             </div>
             <div class="trend-card third">
                 <h3>Properties Sold</h3>
                 <div class="stat-value">1,240</div>
-                <p style="color: green;">▲ 12% from last month</p>
+                <p class="trend-up">▲ 12% from last month</p>
             </div>
             <div class="trend-card third">
                 <h3>New Listings</h3>
                 <div class="stat-value">385</div>
-                <p style="color: red;">▼ 2.1% from last month</p>
+                <p class="trend-down">▼ 2.1% from last month</p>
             </div>
 
-            <div class="trend-card half"
-                style="min-height: 300px; display: flex; flex-direction: column; justify-content: center;">
+            <div class="trend-card half card-flex">
                 <h3>Price History (Last 6 Months)</h3>
-                <div
-                    style="display: flex; align-items: flex-end; justify-content: space-between; height: 200px; margin-top: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-                    <div style="width: 12%; background: #e0e7ff; height: 40%; border-radius: 5px 5px 0 0;"></div>
-                    <div style="width: 12%; background: #c7d2fe; height: 55%; border-radius: 5px 5px 0 0;"></div>
-                    <div style="width: 12%; background: #a5b4fc; height: 45%; border-radius: 5px 5px 0 0;"></div>
-                    <div style="width: 12%; background: #818cf8; height: 65%; border-radius: 5px 5px 0 0;"></div>
-                    <div style="width: 12%; background: #6366f1; height: 80%; border-radius: 5px 5px 0 0;"></div>
-                    <div style="width: 12%; background: #4f46e5; height: 75%; border-radius: 5px 5px 0 0;"></div>
+                <div class="chart-container">
+                    <div class="chart-bar bar-1"></div>
+                    <div class="chart-bar bar-2"></div>
+                    <div class="chart-bar bar-3"></div>
+                    <div class="chart-bar bar-4"></div>
+                    <div class="chart-bar bar-5"></div>
+                    <div class="chart-bar bar-6"></div>
                 </div>
-                <div
-                    style="display: flex; justify-content: space-between; color: gray; font-size: 12px; margin-top: 5px;">
+                <div class="chart-labels">
                     <span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span>
                 </div>
             </div>
 
             <div class="trend-card half">
                 <h3>Top Neighborhoods</h3>
-                <ul style="list-style: none; padding: 0; margin-top: 20px;">
-                    <li
-                        style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee;">
+                <ul class="neighborhood-list">
+                    <li class="neighborhood-item">
                         <span>Downtown District</span>
-                        <span style="font-weight: bold;">₹85.5L Avg.</span>
+                        <span class="price-bold">₹85.5L Avg.</span>
                     </li>
-                    <li
-                        style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee;">
+                    <li class="neighborhood-item">
                         <span>Westwood Heights</span>
-                        <span style="font-weight: bold;">₹62.0L Avg.</span>
+                        <span class="price-bold">₹62.0L Avg.</span>
                     </li>
-                    <li
-                        style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee;">
+                    <li class="neighborhood-item">
                         <span>Lakeside View</span>
-                        <span style="font-weight: bold;">₹58.2L Avg.</span>
+                        <span class="price-bold">₹58.2L Avg.</span>
                     </li>
-                    <li style="display: flex; justify-content: space-between; padding: 15px 0;">
+                    <li class="neighborhood-item">
                         <span>Sunnyvale</span>
-                        <span style="font-weight: bold;">₹42.8L Avg.</span>
+                        <span class="price-bold">₹42.8L Avg.</span>
                     </li>
                 </ul>
             </div>
 
-            <div class="trend-card full" style="text-align: center; background: #155dfb; color: white;">
+            <div class="trend-card full subscribe-card">
                 <h2>Want detailed reports?</h2>
-                <p style="margin: 15px 0 25px;">Subscribe to our weekly market analysis newsletter.</p>
-                <div style="max-width: 400px; margin: 0 auto; display: flex; gap: 10px;">
-                    <input type="email" placeholder="Enter your email"
-                        style="flex: 1; padding: 12px; border-radius: 10px; border: none;">
-                    <button
-                        style="background: white; color: #155dfb; border: none; padding: 12px 25px; border-radius: 10px; font-weight: bold; cursor: pointer;">Subscribe</button>
+                <p class="subscribe-text">Subscribe to our weekly market analysis newsletter.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" class="subscribe-input">
+                    <button class="subscribe-btn">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -145,7 +137,7 @@
             </div>
         </div>
 
-        <hr style="background-color: gray;">
+        <hr>
 
         <div class="copyright-info">
             &copy; 2026 GetEstate Real Estate. All rights reserved.

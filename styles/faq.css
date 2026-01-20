@@ -47,3 +47,11 @@ summary::-webkit-details-marker {
 .faq-answer {
     padding: 20px;
 }
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-link {
+    color: #155dfb;
+}

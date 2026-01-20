@@ -55,3 +55,9 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+.agent-desc {
+    color: gray;
+    font-size: 14px;
+    margin-top: 8px;
+}

@@ -401,3 +401,132 @@ footer {
 .btn-primary:hover {
     background: #0f4bd8;
 }
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    gap: 30px;
+}
+
+.benefit-card {
+    padding: 30px;
+    background: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    color: #155dfb;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.benefit-title {
+    margin-bottom: 15px;
+}
+
+.benefit-desc {
+    color: gray;
+}
+
+/* Property Section Extras */
+.property-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-all-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #155dfb;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.testimonials-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials-container h2 {
+    margin-bottom: 50px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: left;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-stars {
+    color: #ffb400;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    background: #ddd;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-info h4 {
+    margin: 0;
+}
+
+.user-role {
+    font-size: 0.9rem;
+    color: gray;
+}
