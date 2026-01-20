@@ -26,46 +26,21 @@ async function openPropertyModal() {
   dialog.showModal();
 }
 
+function addCard(data) {
+  const container = document.getElementById("detail-cards");
+  if (!container) return; // ← THIS LINE FIXES EVERYTHING
 
-function test() {
-  const propTitle = document.getElementById("property-title").value;
-  const propPrice = document.getElementById("prop-price").value;
-  const propAdd = document.getElementById("prop-loc").value;
-  const cardPropImage = document.getElementById("prop-photos").files[0];
-  if (!cardPropImage) return;
-
-
-  const imgURL = URL.createObjectURL(cardPropImage);
-
-  const amt = Number(propPrice).toLocaleString("en-IN", {
+  const formattedPrice = Number(data.price).toLocaleString("en-IN", {
     style: 'currency',
     currency: 'INR',
     maximumFractionDigits: 0
   })
 
 
-  const reader = new FileReader();
-
-  reader.onload = () => {
-
-    const data = {
-      title: propTitle,
-      price: propPrice,
-      address: propAdd,
-      image: reader.result
-    };
-
-    localStorage.setItem("propertyData", JSON.stringify(data));
-  };
-  reader.readAsDataURL(cardPropImage)
-
-  const saved = localStorage.getItem("propertyData");
-
-  if (saved) {
-    const data = JSON.parse(saved);
-
-  const propCard = `
-  <a class="property-card" href="property pages/property1.html">
+  container.insertAdjacentHTML(
+    "beforeend",
+    `
+    <a class="property-card" href="property pages/property1.html">
   <div class="pcard-image">
   <img src="${data.image}" alt="bungalow-image">
   </div>
@@ -74,7 +49,7 @@ function test() {
   ${data.title}
   </div>
   <div class="pcard-price">
-  <span>${data.price}</span>
+  <span>${formattedPrice}</span>
   </div>
   <div class="pcard-add">
   <span>${data.address}</span>
@@ -86,14 +61,36 @@ function test() {
   </div>
   </div>
   </a>
-  `
-
-
-  let cardGrid = document.getElementById("detail-cards");
-  cardGrid.insertAdjacentHTML("beforeend", propCard);
+    `
+  );
 }
+function test() {
+  const title = document.getElementById("property-title").value;
+  const price = document.getElementById("prop-price").value;
+  const address = document.getElementById("prop-loc").value;
+  const file = document.getElementById("prop-photos").files[0];
+  if (!file) return;
 
+  const reader = new FileReader();
 
+  reader.onload = () => {
+    const data = { title, price, address, image: reader.result };
+
+    let list = JSON.parse(localStorage.getItem("propertyData"));
+    if (!Array.isArray(list)) list = [];
+
+    list.push(data);
+    localStorage.setItem("propertyData", JSON.stringify(list));
+
+    addCard(data);
+  };
+
+  reader.readAsDataURL(file);
 
   document.getElementById('myDialog').close()
 }
+
+window.onload = () => {
+  const list = JSON.parse(localStorage.getItem("propertyData")) || [];
+  list.forEach(addCard);
+};
