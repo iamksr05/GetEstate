@@ -1,0 +1,28 @@
+/* Market Trends */
+.trends-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+.trend-card {
+    background: var(--bg-color);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.trend-card.full {
+    grid-column: span 12;
+}
+
+.trend-card.half {
+    grid-column: span 6;
+}
+
+.trend-card.third {
+    grid-column: span 4;
+}

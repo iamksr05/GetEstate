@@ -17,7 +17,9 @@ async function openPropertyModal() {
   let dialog = document.getElementById("myDialog");
 
   if (!dialog) {
-    const res = await fetch("../property-modal.html");
+    const isSubPage = window.location.pathname.includes("/pages/") || window.location.pathname.includes("/property%20pages/");
+    const path = isSubPage ? "../property-modal.html" : "property-modal.html";
+    const res = await fetch(path);
     const html = await res.text();
     document.body.insertAdjacentHTML("beforeend", html);
     dialog = document.getElementById("myDialog");
@@ -36,11 +38,13 @@ function addCard(data) {
     maximumFractionDigits: 0
   })
 
+  const isSubPage = window.location.pathname.includes("/pages/") || window.location.pathname.includes("/property%20pages/");
+  const linkPath = isSubPage ? "../property pages/property1.html" : "property pages/property1.html";
 
   container.insertAdjacentHTML(
     "beforeend",
     `
-    <a class="property-card" href="property pages/property1.html">
+    <a class="property-card" href="${linkPath}">
   <div class="pcard-image">
   <img src="${data.image}" alt="bungalow-image">
   </div>

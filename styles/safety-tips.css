@@ -1,0 +1,16 @@
+/* Safety Tips */
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.safety-card {
+    background: var(--bg-color);
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 5px solid var(--btn-bgcolor);
+}

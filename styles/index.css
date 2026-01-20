@@ -20,6 +20,10 @@ body {
     color: var(--primary-color);
 }
 
+.main-head a {
+    color: black;
+}
+
 
 header {
     justify-items: center;
@@ -350,4 +354,54 @@ footer {
 .detail-cards a:visited {
     color: black;
     text-decoration: none;
+}
+
+/* Page Headers */
+.page-header {
+    text-align: center;
+    padding: 80px 20px;
+    /* background: linear-gradient(180deg, var(--surface-color) 0%, rgba(21, 93, 251, 0.05) 100%); */
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 56px;
+    margin-bottom: 16px;
+    color: #0636a7;
+    background-clip: text;
+    letter-spacing: -1px;
+}
+
+.stat-value {
+    font-size: 42px;
+    font-weight: 800;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #155dfb, #a020f0);
+    background-clip: text;
+}
+
+.page-header p {
+    color: var(--color-faded);
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Generic Button */
+.btn-primary {
+    background: var(--btn-bgcolor);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: #0f4bd8;
 }
