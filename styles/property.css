@@ -25,7 +25,6 @@ body {
 header {
     justify-items: center;
     border-bottom: 0.8px solid gray;
-    /* background-color: var(--bg-color); */
     color: var(--primary-color);
     position: fixed;
     margin-left: -8px;
@@ -48,7 +47,7 @@ header {
 
 .main-head a:active,
 .main-head a:visited,
-.main-head  a:link {
+.main-head a:link {
     color: #000000;
     text-decoration: none;
 }
@@ -445,7 +444,7 @@ aside {
 }
 
 .property-cards-list::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .property-card {
@@ -491,12 +490,13 @@ aside {
     margin: 8px 0px 0px 0px;
     color: #8c8888;
 }
+
 .pcard-prop-info {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 
-.rooms span{
+.rooms span {
     display: inline-block;
     padding-right: 15px;
     font-weight: 580;
@@ -526,7 +526,6 @@ footer {
 }
 
 .site-footer {
-    /* max-width: 1300px; */
     margin: 10 auto;
     padding: 40px;
     display: grid;
