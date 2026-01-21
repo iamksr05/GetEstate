@@ -98,10 +98,27 @@ window.onload = () => {
 
 
 
+function getNumber(text) {
+  return Number(text.replace(/[^\d]/g, ""));
+}
 
+function parseRange(value) {
+  if (value === "all") return null;
+  if (value.includes("+")) return [Number(value.replace("+", "")), Infinity];
+  return value.split("-").map(Number);
+}
 
 
 function filter() {
+  const priceFilter = document.getElementById("price-filter").value;
+  const areaFilter = document.getElementById("area-filter").value;
+
+  const priceRange = parseRange(priceFilter);
+  const areaRange = parseRange(areaFilter);
+
+
+
+
   const propType = document.getElementById("filter-select");
   const houseType = document.getElementsByClassName("pcard-house-type");
   const propCard = document.getElementsByClassName("property-card");
@@ -110,17 +127,33 @@ function filter() {
   for (let index = 0; index < houseType.length; index++) {
     const element = houseType[index];
 
-    if (typeFilter == "all"){
+    if (typeFilter == "all") {
       propCard[index].style.display = "";
-      continue;
-    }
-    
-    if (typeFilter != element.textContent) {
+    } else if (typeFilter != element.textContent) {
       propCard[index].style.display = "none";
     } else {
       propCard[index].style.display = "";
     }
 
+
+
+    const priceText = propCard[index].querySelector(".pcard-price span").textContent;
+
+    const areaText = propCard[index].querySelector(".pcard-prop-info div:last-child span").textContent;
+
+    const price = getNumber(priceText);
+    const area = getNumber(areaText);
+
+
+    if (priceRange && (price < priceRange[0] || price > priceRange[1])) {
+      propCard[index].style.display = "none";
+      continue;
+    }
+
+    if (areaRange && (area < areaRange[0] || area > areaRange[1])) {
+      propCard[index].style.display = "none";
+      continue;
+    }
   }
 
 }
