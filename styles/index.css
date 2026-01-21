@@ -158,7 +158,7 @@ main {
 
 .browse-btn a:active {
     background-color: #0840b9;
-    
+
 }
 
 .search-text {
@@ -444,7 +444,7 @@ footer {
     background: #0f4bd8;
 }
 
-/* Why Choose Us Section */
+
 .why-choose-us {
     padding: 60px 20px;
     max-width: 1200px;
@@ -485,7 +485,7 @@ footer {
     color: gray;
 }
 
-/* Property Section Extras */
+
 .property-section h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -508,7 +508,7 @@ footer {
     transition: transform 0.2s;
 }
 
-/* Testimonials Section */
+
 .testimonials-section {
     padding: 80px 20px;
     background: #f8f9fa;
@@ -571,4 +571,137 @@ footer {
 .user-role {
     font-size: 0.9rem;
     color: gray;
+}
+
+@media (orientation: portrait) {
+    .main-head {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    header {
+        height: auto;
+        position: relative;
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    .head-nav {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+
+    .search-section {
+        margin-top: 0;
+        border-radius: 0;
+        padding: 80px 20px;
+        height: auto;
+        width: 100vw;
+        margin-left: -8px;
+        min-height: 400px;
+        background-position: center;
+    }
+
+    .search-text h2 {
+        width: 100%;
+        font-size: 38px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .search-text p {
+        font-size: 18px;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .search-text {
+        width: 100%;
+        height: auto;
+        padding-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .search-filter {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .search-filter>div {
+        flex-direction: column;
+        border-left: none;
+        padding-left: 0;
+        row-gap: 10px;
+    }
+
+    .house-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    .detail-cards {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .property-card {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-name-logo {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .footer-nav ul {
+        text-align: center;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .news-email+button {
+        width: 100%;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .stat-value {
+        font-size: 32px;
+    }
 }

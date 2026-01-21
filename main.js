@@ -110,6 +110,7 @@ function parseRange(value) {
 
 
 function filter() {
+  const locationInput = document.getElementById("location-filter").value.toLowerCase().trim();
   const priceFilter = document.getElementById("price-filter").value;
   const areaFilter = document.getElementById("area-filter").value;
 
@@ -151,6 +152,14 @@ function filter() {
     }
 
     if (areaRange && (area < areaRange[0] || area > areaRange[1])) {
+      propCard[index].style.display = "none";
+      continue;
+    }
+
+
+    const addressText = propCard[index].querySelector(".pcard-add span").textContent.toLowerCase();
+
+    if (locationInput && !addressText.includes(locationInput)) {
       propCard[index].style.display = "none";
       continue;
     }

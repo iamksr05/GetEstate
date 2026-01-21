@@ -38,7 +38,7 @@
     color: red;
 }
 
-/* Chart */
+
 .chart-container {
     display: flex;
     align-items: flex-end;
@@ -92,7 +92,7 @@
     margin-top: 5px;
 }
 
-/* List */
+
 .neighborhood-list {
     list-style: none;
     padding: 0;
@@ -114,7 +114,7 @@
     font-weight: bold;
 }
 
-/* Subscribe Card */
+
 .subscribe-card {
     text-align: center;
     background: #155dfb;
@@ -147,4 +147,24 @@
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+@media (orientation: portrait) {
+    .trends-container {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-card.full,
+    .trend-card.half {
+        grid-column: auto;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .chart-container {
+        height: 150px;
+    }
 }

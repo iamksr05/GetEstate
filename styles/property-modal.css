@@ -177,3 +177,54 @@
     background-color: #e3e5e8;
     transform: scale(0.96);
 }
+
+@media (orientation: portrait) {
+    .myDialog {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .list-body {
+        padding: 10px;
+    }
+
+    .prop-info>input,
+    .prop-info textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .type-price {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .prop-tp input,
+    .prop-tp select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .prop-specs {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .spec-item input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .prop-images-sec {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .modal-btn {
+        justify-content: center;
+        gap: 10px;
+    }
+}

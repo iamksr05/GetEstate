@@ -1,5 +1,3 @@
-/* Help Center */
-
 .help-hero {
     background: #155dfb;
     color: white;
@@ -118,4 +116,26 @@
     text-decoration: none;
     width: auto !important;
     padding: 15px 40px;
+}
+
+@media (orientation: portrait) {
+    .help-hero {
+        padding: 50px 20px;
+        margin-bottom: 40px;
+        width: auto;
+    }
+
+    .help-hero .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .help-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button {
+        width: 100% !important;
+        text-align: center;
+        box-sizing: border-box;
+    }
 }

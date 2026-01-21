@@ -27,3 +27,9 @@
     color: gray;
     line-height: 1.6;
 }
+
+@media (orientation: portrait) {
+    .safety-grid {
+        grid-template-columns: 1fr;
+    }
+}

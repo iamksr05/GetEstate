@@ -55,3 +55,10 @@ summary::-webkit-details-marker {
 .faq-link {
     color: #155dfb;
 }
+
+@media (orientation: portrait) {
+    .faq-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
