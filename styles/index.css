@@ -85,6 +85,7 @@ header {
     border-radius: 10px;
     border: 1px solid blue;
     color: white;
+    cursor: pointer;
     background-color: var(--btn-bgcolor);
 }
 
