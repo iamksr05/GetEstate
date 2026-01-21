@@ -2,8 +2,12 @@
     color: black;
 }
 
+main {
+    margin-top: 0px;
+}
+
 .browse-filters {
-    width: 900px;
+    width: 1100px;
     margin: -60px auto 50px;
     position: relative;
     z-index: 10;

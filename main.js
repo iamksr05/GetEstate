@@ -6,9 +6,7 @@ async function openPropertyModal() {
   let dialog = document.getElementById("myDialog");
 
   if (!dialog) {
-    const isSubPage = window.location.pathname.includes("/pages/") || window.location.pathname.includes("/property%20pages/");
-    const path = isSubPage ? "../property-modal.html" : "property-modal.html";
-    const res = await fetch(path);
+    const res = await fetch("../property-modal.html");
     const html = await res.text();
     document.body.insertAdjacentHTML("beforeend", html);
     dialog = document.getElementById("myDialog");
@@ -17,23 +15,23 @@ async function openPropertyModal() {
   dialog.showModal();
 }
 
+
 function addCard(data) {
   const container = document.getElementById("detail-cards");
-  if (!container) return; // ← THIS LINE FIXES EVERYTHING
-
+  if (!container) return;
   const formattedPrice = Number(data.price).toLocaleString("en-IN", {
     style: 'currency',
     currency: 'INR',
     maximumFractionDigits: 0
   })
 
-  const isSubPage = window.location.pathname.includes("/pages/") || window.location.pathname.includes("/property%20pages/");
-  const linkPath = isSubPage ? "../property pages/property1.html" : "property pages/property1.html";
+    const area = Number(data.area).toLocaleString("en-IN");
+
 
   container.insertAdjacentHTML(
     "beforeend",
     `
-    <a class="property-card" href="${linkPath}">
+    <a class="property-card" href="../property pages/property1.html">
   <div class="pcard-image">
   <img src="${data.image}" alt="bungalow-image">
   </div>
@@ -48,26 +46,34 @@ function addCard(data) {
   <span>${data.address}</span>
   </div>
   <div class="pcard-prop-info">
-  <div><img src="assets/images/bed.svg" height="20px"><span>3 Beds</span></div>
-  <div><img src="assets/images/bath.svg" height="20px"><span>2 Bath</span></div>
-  <div><img src="assets/images/area.svg" height="20px"><span>2,000 sqft</span></div>
+  <div><img src="../assets/images/bed.svg" height="20px"><span>${data.bed} Beds</span></div>
+  <div><img src="../assets/images/bath.svg" height="20px"><span>${data.bath} Bath</span></div>
+  <div><img src="../assets/images/area.svg" height="20px"><span>${area} sq. ft.</span></div>
   </div>
   </div>
   </a>
     `
   );
 }
+
+
+
 function test() {
   const title = document.getElementById("property-title").value;
   const price = document.getElementById("prop-price").value;
   const address = document.getElementById("prop-loc").value;
+
+  const bed = document.getElementById("prop-beds").value;
+  const bath = document.getElementById("prop-baths").value;
+  const area = document.getElementById("prop-area").value;
+
   const file = document.getElementById("prop-photos").files[0];
   if (!file) return;
 
   const reader = new FileReader();
 
   reader.onload = () => {
-    const data = { title, price, address, image: reader.result };
+    const data = { title, price, address, image: reader.result, bed, bath, area };
 
     let list = JSON.parse(localStorage.getItem("propertyData"));
     if (!Array.isArray(list)) list = [];
@@ -87,3 +93,13 @@ window.onload = () => {
   const list = JSON.parse(localStorage.getItem("propertyData")) || [];
   list.forEach(addCard);
 };
+
+
+
+
+
+
+// function filter() {
+//   const cards = document.getElementsByClassName("property-card");
+  
+// }

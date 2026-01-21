@@ -26,14 +26,53 @@
             <div class="prop-tp">
                 <label for="prop-type">Property Type</label><br>
                 <select name="prop-type" id="prop-type">
-                    <option value="">SELECT TYPE</option>
-                    <option value="house">House</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="villa">Villa</option>
-                    <option value="townhome">Townhome</option>
-                    <option value="flat">Flat</option>
-                    <option value="farmhouse">Farmhouse</option>
+                    <option value="">Select Type</option>
+                    <optgroup label="Residential">
+                            <option>Apartment</option>
+                            <option>House</option>
+                            <option>Villa</option>
+                            <option>Townhouse</option>
+                            <option>Penthouse</option>
+                            <option>Farmhouse</option>
+                        </optgroup>
+                        <optgroup label="Commercial">
+                            <option>Shop</option>
+                            <option>Warehouse</option>
+                            <option>Factory</option>
+                            <option>Building</option>
+                            <option>IT Park</option>
+                        </optgroup>
+                        <optgroup label="Plot">
+                            <option>Residential</option>
+                            <option>Commercial</option>
+                            <option>Agricultural</option>
+                            <option>Industrial</option>
+                            <option>Farm</option>
+                        </optgroup>
+                        <optgroup label="Other Properties">
+                            <option>Hotel</option>
+                            <option>Hostel</option>
+                            <option>Mixed-Use</option>
+                            <option>Institutional</option>
+                        </optgroup>
                 </select>
+            </div>
+        </div>
+
+        <div class="prop-specs">
+            <div class="spec-item">
+                <label for="prop-beds">Bed rooms</label><br>
+                <input type="number" id="prop-beds" placeholder="e.g. 3" min="0">
+            </div>
+
+            <div class="spec-item">
+                <label for="prop-baths">Bath rooms</label><br>
+                <input type="number" id="prop-baths" placeholder="e.g. 2" min="0">
+            </div>
+
+            <div class="spec-item">
+                <label for="prop-area">Area (Sq Ft)</label><br>
+                <input type="number" id="prop-area" placeholder="e.g. 2000" min="0">
             </div>
         </div>
 

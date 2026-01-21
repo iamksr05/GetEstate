@@ -35,7 +35,7 @@
 }
 
 .prop-info label {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 500;
 }
 
@@ -53,7 +53,7 @@
 
 .prop-tp input,
 .prop-tp select {
-    font-size: 16px;
+    font-size: 17px;
     padding: 12px;
     margin-top: 5px;
     border-radius: 8px;
@@ -83,6 +83,37 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+}
+
+
+.prop-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.spec-item label {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.spec-item input {
+    width: 180px;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    color: #2c2b2b;
+    border: 1px solid #e7e3e3;
+}
+
+.prop-info {
+    font-size: 17px;
+}
+
+.spec-item input::placeholder {
+    color: rgb(173, 168, 168);
 }
 
 

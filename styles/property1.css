@@ -33,6 +33,9 @@ header {
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px);
     z-index: 100;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .main-head {
@@ -43,6 +46,12 @@ header {
     justify-content: space-between;
     padding: 30px 0px 20px 0px;
 
+}
+
+.name-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .main-head a:active,
