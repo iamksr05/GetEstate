@@ -1,6 +1,6 @@
 .safety-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 4fr 4fr 4fr;
     gap: 30px;
     max-width: 1300px;
     margin: 0 auto;

@@ -1,36 +1,59 @@
 /* Help Center */
 
-
 .help-hero {
     background: #155dfb;
     color: white;
     padding: 80px 20px;
     text-align: center;
     border-radius: 40px;
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
+    max-width: 1200px;
+}
+
+.help-hero .hero-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.help-hero .hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
 }
 
 .help-search {
     max-width: 600px;
-    margin: 30px auto 0;
+    margin: 0 auto;
     position: relative;
 }
 
 .help-search input {
-    width: 90%;
-    padding: 20px 30px;
+    width: 100%;
+    padding: 20px 60px 20px 30px;
     border-radius: 50px;
     border: none;
     font-size: 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    outline: none;
+    color: #333;
+}
+
+.help-search .search-icon {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #155dfb;
+    font-size: 24px;
 }
 
 .help-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
     padding: 0 20px;
 }
 
@@ -41,9 +64,58 @@
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .category-card:hover {
     border-color: var(--btn-bgcolor);
     transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+    font-size: 3rem;
+    color: var(--btn-bgcolor);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.category-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.category-desc {
+    color: var(--color-faded);
+    line-height: 1.6;
+}
+
+.help-cta {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.help-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    width: auto !important;
+    padding: 15px 40px;
 }
