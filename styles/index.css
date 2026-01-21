@@ -111,18 +111,54 @@ main {
     justify-content: center;
 }
 
+.search-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .search-text h2 {
+    width: 1000px;
     color: white;
-    font-size: 60px;
+    font-size: 80px;
     margin-bottom: -10px;
 }
 
 
 .search-text p {
-    color: white;
+    color: rgb(224, 205, 205);
     font-size: 20px;
     text-align: center;
     line-height: 30px;
+}
+
+.browse-btn {
+    margin-top: 50px;
+}
+
+.browse-btn a {
+    display: inline-block;
+    font-size: 22px;
+    color: white;
+    background-color: #0e4dd5;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 30px;
+    text-decoration: none;
+    transition: transform 0.1s ease;
+}
+
+.browse-btn a:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(72, 122, 229, 1);
+    transform: scale(1.1);
+}
+
+.browse-btn a:active {
+    background-color: #0840b9;
+    
 }
 
 .search-text {

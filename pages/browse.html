@@ -46,35 +46,38 @@
 
                 <div class="filter-input-group">
                     <label>Type</label>
-                    <select class="filter-select">
-                        <option>All Types</option>
+                    <select class="filter-select" id="filter-select">
+                        <option value="all">All Types</option>
                         <optgroup label="Residential">
-                            <option>Apartment</option>
-                            <option>House</option>
-                            <option>Villa</option>
-                            <option>Townhouse</option>
-                            <option>Penthouse</option>
-                            <option>Farmhouse</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="house">House</option>
+                            <option value="villa">Villa</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="penthouse">Penthouse</option>
+                            <option value="farmhouse">Farmhouse</option>
                         </optgroup>
+
                         <optgroup label="Commercial">
-                            <option>Shop</option>
-                            <option>Warehouse</option>
-                            <option>Factory</option>
-                            <option>Building</option>
-                            <option>IT Park</option>
+                            <option value="shop">Shop</option>
+                            <option value="warehouse">Warehouse</option>
+                            <option value="factory">Factory</option>
+                            <option value="building">Building</option>
+                            <option value="it-park">IT Park</option>
                         </optgroup>
+
                         <optgroup label="Plot">
-                            <option>Residential</option>
-                            <option>Commercial</option>
-                            <option>Agricultural</option>
-                            <option>Industrial</option>
-                            <option>Farm</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="agricultural">Agricultural</option>
+                            <option value="industrial">Industrial</option>
+                            <option value="farm">Farm</option>
                         </optgroup>
+
                         <optgroup label="Other Properties">
-                            <option>Hotel</option>
-                            <option>Hostel</option>
-                            <option>Mixed-Use</option>
-                            <option>Institutional</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="hostel">Hostel</option>
+                            <option value="mixed-use">Mixed-Use</option>
+                            <option value="institutional">Institutional</option>
                         </optgroup>
                     </select>
                 </div>
@@ -95,7 +98,7 @@
                 </div>
 
 
-                                <div class="divider-vertical"></div>
+                <div class="divider-vertical"></div>
 
                 <div class="filter-input-group">
                     <label>Beds</label>
@@ -109,7 +112,7 @@
                 </div>
 
 
-                <button type="button" class="browse-search-btn">
+                <button type="button" class="browse-search-btn" onclick="filter()">
                     Search
                 </button>
             </form>
@@ -124,6 +127,7 @@
                     <div class="pcard-details">
                         <div class="pcard-title">Rain Castle</div>
                         <div class="pcard-price"><span>₹34,00,000</span></div>
+                        <div class="pcard-house-type" style="display: none;">shop</div>
                         <div class="pcard-add"><span>123 Maple St, Seattle, WA</span></div>
                         <div class="pcard-prop-info">
                             <div><img src="../assets/images/bed.svg" height="20px"><span>3 Beds</span></div>
@@ -140,6 +144,7 @@
                     <div class="pcard-details">
                         <div class="pcard-title">The Highland</div>
                         <div class="pcard-price"><span>₹45,00,000</span></div>
+                        <div class="pcard-house-type" style="display: none;">building</div>
                         <div class="pcard-add"><span>89 Oak Avenue, Seattle, WA</span></div>
                         <div class="pcard-prop-info">
                             <div><img src="../assets/images/bed.svg" height="20px"><span>4 Beds</span></div>
@@ -156,6 +161,7 @@
                     <div class="pcard-details">
                         <div class="pcard-title">Sunset Villa</div>
                         <div class="pcard-price"><span>₹52,00,000</span></div>
+                        <div class="pcard-house-type" style="display: none;">house</div>
                         <div class="pcard-add"><span>456 Pine Ln, Bellevue, WA</span></div>
                         <div class="pcard-prop-info">
                             <div><img src="../assets/images/bed.svg" height="20px"><span>4 Beds</span></div>
@@ -172,6 +178,7 @@
                     <div class="pcard-details">
                         <div class="pcard-title">Modern Loft</div>
                         <div class="pcard-price"><span>₹28,00,000</span></div>
+                        <div class="pcard-house-type" style="display: none;">farm</div>
                         <div class="pcard-add"><span>789 Cedar Dr, Redmond, WA</span></div>
                         <div class="pcard-prop-info">
                             <div><img src="../assets/images/bed.svg" height="20px"><span>2 Beds</span></div>
@@ -188,6 +195,7 @@
                     <div class="pcard-details">
                         <div class="pcard-title">Garden Estate</div>
                         <div class="pcard-price"><span>₹65,00,000</span></div>
+                        <div class="pcard-house-type" style="display: none;">building</div>
                         <div class="pcard-add"><span>321 Birch Blvd, Seattle, WA</span></div>
                         <div class="pcard-prop-info">
                             <div><img src="../assets/images/bed.svg" height="20px"><span>5 Beds</span></div>
@@ -204,6 +212,7 @@
                     <div class="pcard-details">
                         <div class="pcard-title">Lakeside Manor</div>
                         <div class="pcard-price"><span>₹72,00,000</span></div>
+                        <div class="pcard-house-type" style="display: none;">shop</div>
                         <div class="pcard-add"><span>567 Lake View, Kirkland, WA</span></div>
                         <div class="pcard-prop-info">
                             <div><img src="../assets/images/bed.svg" height="20px"><span>5 Beds</span></div>
@@ -220,7 +229,7 @@
         <div class="site-footer">
             <div class="footer-name-logo">
                 <div>
-                    <img src="../assets/images/title-img.png" style="height: 22px; width: auto;">
+                    <img src="../assets/images/icon-img.png" style="height: 22px; width: auto;">
                     <span class="footer-app-name">&nbsp;GetEstate</span>
                 </div>
                 <p>Making your real estate journey simple and efficient. Find the home you've always dreamed of.</p>

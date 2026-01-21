@@ -25,7 +25,7 @@ function addCard(data) {
     maximumFractionDigits: 0
   })
 
-    const area = Number(data.area).toLocaleString("en-IN");
+  const area = Number(data.area).toLocaleString("en-IN");
 
 
   container.insertAdjacentHTML(
@@ -42,6 +42,7 @@ function addCard(data) {
   <div class="pcard-price">
   <span>${formattedPrice}</span>
   </div>
+  <div class="pcard-house-type" id="pcard-house-type" style="display: none;">${data.propertyType}</div>
   <div class="pcard-add">
   <span>${data.address}</span>
   </div>
@@ -62,6 +63,7 @@ function test() {
   const title = document.getElementById("property-title").value;
   const price = document.getElementById("prop-price").value;
   const address = document.getElementById("prop-loc").value;
+  const propertyType = document.getElementById("prop-type").value;
 
   const bed = document.getElementById("prop-beds").value;
   const bath = document.getElementById("prop-baths").value;
@@ -73,7 +75,7 @@ function test() {
   const reader = new FileReader();
 
   reader.onload = () => {
-    const data = { title, price, address, image: reader.result, bed, bath, area };
+    const data = { title, price, address, image: reader.result, bed, bath, area, propertyType };
 
     let list = JSON.parse(localStorage.getItem("propertyData"));
     if (!Array.isArray(list)) list = [];
@@ -99,7 +101,26 @@ window.onload = () => {
 
 
 
-// function filter() {
-//   const cards = document.getElementsByClassName("property-card");
-  
-// }
+function filter() {
+  const propType = document.getElementById("filter-select");
+  const houseType = document.getElementsByClassName("pcard-house-type");
+  const propCard = document.getElementsByClassName("property-card");
+  const typeFilter = propType.value;
+
+  for (let index = 0; index < houseType.length; index++) {
+    const element = houseType[index];
+
+    if (typeFilter == "all"){
+      propCard[index].style.display = "";
+      continue;
+    }
+    
+    if (typeFilter != element.textContent) {
+      propCard[index].style.display = "none";
+    } else {
+      propCard[index].style.display = "";
+    }
+
+  }
+
+}
