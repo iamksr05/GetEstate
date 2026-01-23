@@ -1,7 +1,3 @@
-
-
-
-
 async function openPropertyModal() {
   let dialog = document.getElementById("myDialog");
 
