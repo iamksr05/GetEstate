@@ -408,6 +408,7 @@ footer {
     font-size: 56px;
     margin-bottom: 16px;
     color: #0636a7;
+    text-shadow: 10px #0840b9;
     background-clip: text;
     letter-spacing: -1px;
 }
