@@ -54,7 +54,6 @@ function addCard(data) {
 }
 
 
-
 function test() {
   const title = document.getElementById("property-title").value;
   const price = document.getElementById("prop-price").value;
